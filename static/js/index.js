@@ -12,6 +12,12 @@ $(document).ready(function() {
     async: false,
     url: 'api/settings',
     success: function(data) {
+	if(!data.mapCenter) {
+		data.mapCenter = new Array(39.95240, -75.16362);
+	}
+	if(!data.boundingBox){
+		data.boundingBox = new Array(new Array(39.8480851, -75.395736),new Array(40.15211, -74.863586));	
+	}
       data.boundingBox = data.boundingBox && new google.maps.LatLngBounds(new google.maps.LatLng(data.boundingBox[0][0], data.boundingBox[0][1]), new google.maps.LatLng(data.boundingBox[1][0], data.boundingBox[1][1]));
       data.mapCenter = data.mapCenter && new google.maps.LatLng(data.mapCenter[0], data.mapCenter[1]),
       sheltr.state.localSettings = data;
