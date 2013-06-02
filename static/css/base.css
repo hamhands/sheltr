@@ -419,8 +419,7 @@ textarea {
   .map-container {
     width: 90%;
     height: 400px;
-    position: static;
-    left: 5%;
+    margin: 0 auto;
   }
 
   #map {
