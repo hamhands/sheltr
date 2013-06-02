@@ -100,7 +100,7 @@ module.exports = function(app) {
     // TODO also attach perms to user
     https.get({
       host: 'api.cloudmine.me',
-      path: '/v1/app/60ecdcdd9fd6433297924f75c1c07b13/text?keys='+req.body.user,
+      path: '/v3/app/cf704729e7ad4eb8afa084950b503a7a/text?keys='+req.body.user,
       headers: {'X-CloudMine-ApiKey': process.env.CLOUDMINE}
     }, function(cmres) {
       var data = '';
