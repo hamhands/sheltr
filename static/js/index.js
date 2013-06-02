@@ -21,6 +21,9 @@ $(document).ready(function() {
       data.boundingBox = data.boundingBox && new google.maps.LatLngBounds(new google.maps.LatLng(data.boundingBox[0][0], data.boundingBox[0][1]), new google.maps.LatLng(data.boundingBox[1][0], data.boundingBox[1][1]));
       data.mapCenter = data.mapCenter && new google.maps.LatLng(data.mapCenter[0], data.mapCenter[1]),
       sheltr.state.localSettings = data;
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+      console.log('AJAX error: ' + errorThrown);
     }
   });
 
