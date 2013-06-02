@@ -122,7 +122,7 @@ $(document).ready(function() {
 
   });
 
-  $('.addr.text').val('Enter an address, zipcode or intersection.').focus(function() {
-    $(this).select();
-  });
+  //$('.addr.text').val('Enter an address, zipcode or intersection.').focus(function() {
+  //  $(this).select();
+  //});
 });
