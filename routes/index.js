@@ -59,7 +59,7 @@ module.exports = function(app) {
     }
     var cmreq = https.request({
       host: 'api.cloudmine.me',
-      path: '/v1/app/60ecdcdd9fd6433297924f75c1c07b13/text',
+      path: '/v3/app/dc0a88a3284b4ca2b1c854c2c4e54103/text',
       headers: {'Content-Type': 'application/json', 
         'X-CloudMine-ApiKey': process.env.CLOUDMINE},
       method: 'POST'
