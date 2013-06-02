@@ -5,12 +5,14 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   font: normal 100%/1.28571429 Helvetica, Arial, sans-serif;
-  color: #313131;
+  color: #D1D1D1;
   font-size: 14px;
   line-height: 20px;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  background-image: url('../img/sidewalk.png');
 }
 /* https://github.com/paulirish/html5-boilerplate/blob/362d0b7/css/style.css#L35 */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -59,7 +61,7 @@ header .top-row {
 
 .menu {
   background-color: #666;
-  height: 30px;
+  height: auto;
   width: 960px;
   margin: 0 auto;
 }
@@ -75,13 +77,15 @@ header .top-row {
   line-height: 30px;
   font-size: 1em;
   float: right;
-  margin: 0 0 0 35px;
+  margin: 0 30px 0 0px;
   color: white;
 }
 
 footer {
-  margin: 20px auto;
-  width: 960px;
+  width: 100%;
+  height: 20px;
+  background-color: #313131;
+  color: #FFF;
 }
 
 footer p {
@@ -89,9 +93,13 @@ footer p {
   margin: 0;
 }
 
+.details{
+  margin-right: 2%;
+}
+
 .container {
-  margin: 0 auto;
-  width: 960px;
+  margin: 0;
+  width: 100%;
 }
 
 .edit {
@@ -138,30 +146,51 @@ form {
 }
 
 form input.text {
+  -webkit-font-smoothing: antialiased;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -khtml-border-radius: 20px;
+  border-radius: 20px;
   margin: 0 auto;
   margin-bottom: 5px;
   width: 75%;  
+  max-width: 600px;
   border: 1px solid #bbb;
   font-size: 1.8em;
   padding: .5em .25em;
   text-align: center;
   display: block;
   font-family: inherit;
-  color: #999;
+  color: #777;
 }
 
 form button.submit {
-  font-size: 1em;
   padding: .5em .25em;
-  font-family: inherit;
-  display: inline;
-  margin: 0 auto;
-  width: 25%;
-  height: 40px;
+  -webkit-font-smoothing: antialiased;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -khtml-border-radius: 20px;
+  border-radius: 20px;
+  background-color: #8DC73F;
+  color: #188DB8;
+  width: 100px;
+  height: 45px;
+  font-size: 1em;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 form button.submit:hover, form checkbox {
   cursor: pointer;
+}
+
+form button.submit:hover{
+  box-shadow: 0 0 20px #6D9C2E inset;
+}
+
+form button.submit:active{
+  box-shadow: 0 0 65px #6D9C2E inset;
 }
 
 form #checkbox-label-food {
@@ -176,7 +205,7 @@ form #checkbox-label-shelter {
 
 form #checkbox-label-medical {
 margin-right: .5em;
-color: #7E2217;
+color: #BF574A;
 }
 
 form #checkbox-label-food:hover, #checkbox-label-shelter:hover {
@@ -216,12 +245,13 @@ form #checkbox-label-food:hover, #checkbox-label-shelter:hover {
   margin: 0 auto;
 }
 
-#logos {
-  text-align: center;  
+#logos a{
+  width: 100%;
 }
 
-#logos img {
-  margin: 50px 20px 20px 20px;
+.mainlogo img{
+  width: 100%;
+  max-width: 315px;
 }
 
 /* LOCATION DETAILS */
@@ -309,7 +339,7 @@ textarea {
   width: 500px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width:980px) {
 
   header {
     margin-bottom: 0;
@@ -325,7 +355,7 @@ textarea {
   }
 
   .menu ul {
-    margin: 0 auto;
+    margin: 0 2% 0 0;
   }
 
   header h1 {
@@ -357,13 +387,12 @@ textarea {
     font-size: 1.6em;
     width: 95%;
     padding: .15em 0 .15em .15em;
+    max-width: 450px;
   }
 
   form button.submit {
     width: 45%;
-    padding: 0;
-    font-size: 1.2em;
-    padding: 0;
+    max-width: 150px;
   }
 
   form #checkbox-label-food {
@@ -389,8 +418,8 @@ textarea {
 
   .map-container {
     width: 90%;
-    height: 95%;
-    position: absolute;
+    height: 400px;
+    position: static;
     left: 5%;
   }
 
@@ -418,7 +447,6 @@ textarea {
   .location-map-container {
     height: 95%;
     width: 95%;
-    position: absolute;
   }
 
   #location-map {
@@ -426,4 +454,11 @@ textarea {
     height: 100%;
     width: 100%;
   }
+}
+
+@media screen and (max-width:460px){
+  form input.text {
+    font-size: 1em;
+  }
+
 }
