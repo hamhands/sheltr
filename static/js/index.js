@@ -38,7 +38,7 @@ $(document).ready(function() {
         //save position
         sheltr.state.userLocation = userLocation;
 
-        $('.addr.text').val('Your Location');
+        //$('.addr.text').val('Your Location');
 
         if (sheltr.state.localSettings.boundingBox.contains(userLocation))  {
           //get locations based on user location
