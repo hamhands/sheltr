@@ -59,7 +59,7 @@ module.exports = function(app) {
     }
     var cmreq = https.request({
       host: 'api.cloudmine.me',
-      path: '/v3/app/dc0a88a3284b4ca2b1c854c2c4e54103/text',
+      path: '/v1/app/dc0a88a3284b4ca2b1c854c2c4e54103/text',
       headers: {'Content-Type': 'application/json', 
         'X-CloudMine-ApiKey': process.env.CLOUDMINE},
       method: 'POST'
@@ -100,7 +100,7 @@ module.exports = function(app) {
     // TODO also attach perms to user
     https.get({
       host: 'api.cloudmine.me',
-      path: '/v3/app/cf704729e7ad4eb8afa084950b503a7a/text?keys='+req.body.user,
+      path: '/v1/app/dc0a88a3284b4ca2b1c854c2c4e54103/text?keys='+req.body.user,
       headers: {'X-CloudMine-ApiKey': process.env.CLOUDMINE}
     }, function(cmres) {
       var data = '';
@@ -171,7 +171,7 @@ module.exports = function(app) {
     var id = req.params[0];
     https.get({
       host: 'api.cloudmine.me',
-      path: '/v1/app/60ecdcdd9fd6433297924f75c1c07b13/text?keys='+id,
+      path: '/v1/app/dc0a88a3284b4ca2b1c854c2c4e54103/text?keys='+id,
       headers: {'X-CloudMine-ApiKey': process.env.CLOUDMINE}
     }, function(cmres) {
       var data = '';
@@ -206,7 +206,7 @@ module.exports = function(app) {
     // TODO check for user permissions
     var cmreq = https.request({
       host: 'api.cloudmine.me',
-      path: '/v1/app/60ecdcdd9fd6433297924f75c1c07b13/text',
+      path: '/v1/app/dc0a88a3284b4ca2b1c854c2c4e54103/text',
       headers: {'Content-Type': 'application/json', 
         'X-CloudMine-ApiKey': process.env.CLOUDMINE},
       method: 'POST'
