@@ -1,5 +1,5 @@
     <form class="submit">
-      <input class="addr text" type="text" />
+      <input class="addr text" type="text" value="Where are you at?" onclick="this.value = (this.value=='Where are you at?'?'':this.value);" onblur="this.value = (this.value=!this.value?'Where are you at?':this.value);"/>
       <div class="buttons">
         <button class="submit">Submit</button>
         <ul class="form-controls{if appSettings.noFilters} hidden{/if}">
